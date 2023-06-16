@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>山散歩で宝探し</title>
+  <link rel="stylesheet" type="text/css" href="/css/s_map.css">
+</head>
+<body>
+  <h1>山散歩で宝探し</h1>
+
+  <button onclick="getLocation()">現在位置を取得</button>
+  <p id="demo"></p>
+  
+  <!-- マップに現在位置を表示 -->
+  <div id="myMap" style="position:relative;width:600px;height:400px;"></div>
+
+  <script src="https://www.bing.com/api/maps/mapcontrol?callback=loadMap" async defer></script>
+  <script src="/js/s_map.js"></script>
+
+  <!-- メッセージの作成 -->
+  <button onclick="getLocationAndSaveMessage()">メッセージと位置を保存</button>
+  <input type="text" id="message" placeholder="メッセージを入力してください">
+
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+  <script src="/js/saveMessage.js"></script>
+
+  <!-- メッセージを探す -->
+  <button onclick="searchMessages()">メッセージを探す</button>
+  <script src="/js/searchMessages.js"></script>
+
+</body>
+</html>
