@@ -1,6 +1,6 @@
 // Firebaseの設定情報
 var firebaseConfig = {
-// ここにFirebase API KEYを入れる
+// ここにfirebase API KEYを入れる
 };
 
     var app;
@@ -52,6 +52,7 @@ var firebaseConfig = {
                     if(distance <= 0.05) {
                         alert("メッセージを見つけました: " + message);
                     }
+                    
                     });
                 });
             });
@@ -59,3 +60,4 @@ var firebaseConfig = {
             alert("Geolocation is not supported by this browser.");
         }
     }
+
